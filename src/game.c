@@ -217,7 +217,7 @@ void game_logic(float timeElapsed, SceneEvents *evt)
 	{
 		SceneEvent v = evt->evts[e];
 
-		if (!(gameState == 2 || gameState == 3))
+		if (!(gameState == 2 || gameState == 3 || gameState == 7))
 			if (v.type == SCENEEVENT_TYPE_KEYDOWN)
 			{
 				switch (v.keyVal)

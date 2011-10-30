@@ -1,5 +1,6 @@
 0.8.1
 	- Made build under win32
+	- fixed a bug allowing movement from tutorial screen
 
 0.8.0
 	- Initial release
