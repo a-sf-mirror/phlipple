@@ -1,0 +1,85 @@
+
+shared_DATA = \
+	copyright.txt\
+	levels.txt\
+	level001\
+	level006\
+	level002\
+	level020\
+	level018\
+	level005\
+	level007\
+	level049\
+	level009\
+	level010\
+	level014\
+	level060\
+	level003\
+	level004\
+	level094\
+	level021\
+	level008\
+	level027\
+	level016\
+	level041\
+	level017\
+	level013\
+	level019\
+	level023\
+	level025\
+	level026\
+	level028\
+	level029\
+	level030\
+	level012\
+	level031\
+	level032\
+	level022\
+	level011\
+	level076\
+	level065\
+	level066\
+	level064\
+	level033\
+	level034\
+	level035\
+	level037\
+	level038\
+	level042\
+	level044\
+	level045\
+	level046\
+	level047\
+	level048\
+	level050\
+	audiooff.png\
+	audioon.png\
+	click2.ogg\
+	click.ogg\
+	failure.ogg\
+	glitch.ogg\
+	logo.png\
+	menu.png\
+	next.png\
+	pause.png\
+	phlip.ogg\
+	quit.png\
+	reset.png\
+	start.png\
+	success.ogg\
+	theme.ogg\
+	tut1.png\
+	tut2.png\
+	tut3.png\
+	leftright.png\
+	ubuntu_0.png\
+	ubuntu.fnt\
+	support_android.png\
+	support_apple.png
+
+shareddir = \
+	$(pkgdatadir)
+
+EXTRA_DIST = \
+	$(shared_DATA)
+
