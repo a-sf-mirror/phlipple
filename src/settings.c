@@ -76,11 +76,23 @@ void w32_createFile(const char *phname)
 const char *getDefaultDir()
 {
 	static char defDir[MAX_PATH];
+
 #ifndef WIN32
 	char *dir = getenv(ENVVAR);
 	sprintf(defDir, "%s%s%s", dir, SEPARATOR, DEFAULT_DIRECTORY);
 	return defDir;
 #endif //WIN32
+
+#ifdef PORTABLE_APPS
+	wchar_t defDirW[MAX_PATH *2];
+	static char ret[MAX_PATH];
+	GetCurrentDirectoryW(MAX_PATH, defDirW);
+	WideCharToMultiByte(CP_UTF8, 0, defDirW, -1, defDir, MAX_PATH * 2, NULL, NULL);
+
+	sprintf(ret, "%s%s..%s..%sdata%ssettings", defDir, SEPARATOR, SEPARATOR, SEPARATOR, SEPARATOR);
+
+	return ret;
+#endif
 
 #ifdef WIN32
 	char mbpath[MAX_PATH *2];

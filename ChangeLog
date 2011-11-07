@@ -1,3 +1,7 @@
+0.8.2
+	- Added PortableApps support (-DPORTABLE_APPS) for win32
+	- fixed link to iTunes
+
 0.8.1
 	- Made build under win32
 	- fixed a bug allowing movement from tutorial screen

@@ -39,9 +39,9 @@
 #define COPYRIGHT						"visit http://phuzzboxmedia.com for more games"
 #define SEL_LEV_TXT						"Select level"
 #define LINUX_BROWSER_ANDROID			"xdg-open http://market.android.com/details?id=com.phuzzboxmedia.phlipple.android"
-#define LINUX_BROWSER_APPLE				"xdg-open http://itunes.apple.com/us/app/phlipple/id465466751?ls=1&mt=8"
-#define WIN32_BROWSER_ANDROID			    "http://market.android.com/details?id=com.phuzzboxmedia.phlipple.android"
-#define WIN32_BROWSER_APPLE				"http://itunes.apple.com/us/app/phlipple/id465466751?ls=1&mt=8"
+#define LINUX_BROWSER_APPLE				"xdg-open http://itunes.apple.com/us/app/phlipple/id465466751?mt=8&uo=4"
+#define WIN32_BROWSER_ANDROID			"http://market.android.com/details?id=com.phuzzboxmedia.phlipple.android"
+#define WIN32_BROWSER_APPLE				"http://itunes.apple.com/us/app/phlipple/id465466751?mt=8&uo=4"
 
 
 //#define SHOW_SPLASH
