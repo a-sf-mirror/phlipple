@@ -77,7 +77,6 @@ static int showBrowser = 0;
 static int fadeOut = 0;
 
 static int highlightSupp1 = 0;
-static int highlightSupp2 = 0;
 
 // 0 none, 1 quit, 2 play, 3 browser
 static int fadeAction = 0;
@@ -205,7 +204,7 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 
 	// detect mouse over support buttonz
 	highlightSupp1 = 0;
-	highlightSupp2 = 0;
+
 	float mx = (((float) OS_getMouseX() / (float) width) * (right - left))
 	           + left;
 	float my = (((float) OS_getMouseY() / (float) height) * (bottom - top))
@@ -215,9 +214,6 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 	{
 		if (fabs(mx - (left + buttSize / 2.0)) < buttSize / 2.0)
 			highlightSupp1 = 1;
-
-		if (fabs(mx - (right - buttSize / 2.0)) < buttSize / 2.0)
-			highlightSupp2 = 1;
 	}
 
 	int buttPressed = 0;
@@ -254,17 +250,6 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 #endif
 #ifdef WIN32
 				ShellExecute(NULL, "open", WIN32_BROWSER_ANDROID, NULL, NULL, SW_SHOWNORMAL);
-#endif
-			}
-
-			if (highlightSupp2)
-			{
-#ifndef WIN32
-				int i = system(LINUX_BROWSER_APPLE);
-				i++;
-#endif
-#ifdef WIN32
-				ShellExecute(NULL, "open", WIN32_BROWSER_APPLE, NULL, NULL, SW_SHOWNORMAL);
 #endif
 			}
 
@@ -663,21 +648,6 @@ void mainScreen_render()
 	glScalef(buttSize, buttSize / 2.0, 0);
 	render_quad();
 	glPopMatrix();
-
-
-	alpha = interpolator_getVal(&buttAlpha);
-	alpha *= 0.5;
-	if (highlightSupp2)
-		alpha = 1.0;
-
-	texture_apply(texSupp2);
-	glPushMatrix();
-	glColor4f(1, 1, 1, alpha);
-	glTranslatef(right - buttSize / 2, bottom + buttSize / 4, 0);
-	glScalef(buttSize, buttSize / 2.0, 0);
-	render_quad();
-	glPopMatrix();
-
 
 	if (!browserAlpha.idle || showBrowser)
 		browserRender();

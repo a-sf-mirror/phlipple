@@ -1,3 +1,5 @@
+0.8.5
+	- Added the rest of levels
 0.8.2
 	- Added PortableApps support (-DPORTABLE_APPS) for win32
 	- fixed link to iTunes
