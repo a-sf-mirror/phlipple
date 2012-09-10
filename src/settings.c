@@ -158,7 +158,7 @@ void parseLine(const char *buff)
 	if (sep <= 0)
 		return;
 
-	char *key = malloc(sep);
+	char *key = malloc(sep + 1);
 	char *val = malloc(ll - sep);
 
 	strncpy(key, buff, sep);

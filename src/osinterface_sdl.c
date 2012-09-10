@@ -193,6 +193,7 @@ void OS_quit()
 
 	SDL_Quit();
 	settings_save();
+	settings_clear();
 }
 
 void keyboard(unsigned char key, int x, int y)

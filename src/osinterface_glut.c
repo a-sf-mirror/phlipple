@@ -96,6 +96,7 @@ void OS_quit()
 	SceneManager_eventsDestroy(evts);
 	hasQuit = 1;
 	glutLeaveMainLoop();
+	settings_clear();
 }
 
 void mouse(int butt, int state, int x, int y)
