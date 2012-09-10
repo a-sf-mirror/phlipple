@@ -168,13 +168,10 @@ void parseLine(const char *buff)
 	strip(val);
 
 	if (strlen(key) && strlen(val))
-	{
 		settings_set(key, val);
-	} else 
-	{
-		free(key);
-		free(val);
-	}
+
+	free(key);
+	free(val);
 }
 
 void settings_load()
