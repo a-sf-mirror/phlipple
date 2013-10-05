@@ -123,9 +123,7 @@ shared_DATA = \
 	tut3.png\
 	leftright.png\
 	ubuntu_0.png\
-	ubuntu.fnt\
-	support_android.png\
-	support_apple.png
+	ubuntu.fnt
 
 shareddir = \
 	$(pkgdatadir)

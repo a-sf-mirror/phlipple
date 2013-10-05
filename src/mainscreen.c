@@ -203,7 +203,7 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 	}
 
 	// detect mouse over support buttonz
-	highlightSupp1 = 0;
+/*	highlightSupp1 = 0;
 
 	float mx = (((float) OS_getMouseX() / (float) width) * (right - left))
 	           + left;
@@ -215,7 +215,7 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 		if (fabs(mx - (left + buttSize / 2.0)) < buttSize / 2.0)
 			highlightSupp1 = 1;
 	}
-
+*/
 	int buttPressed = 0;
 	for (int e = 0; e < evt->nevt; e++)
 	{
@@ -240,18 +240,6 @@ void mainScreen_logic(float timeElapsed, SceneEvents *evt)
 			              + left;
 			float downY = (((float) v.y / (float) height) * (bottom - top))
 			              + top;
-
-
-			if (highlightSupp1)
-			{
-#ifndef WIN32
-				int i = system(LINUX_BROWSER_ANDROID);
-				i++;
-#endif
-#ifdef WIN32
-				ShellExecute(NULL, "open", WIN32_BROWSER_ANDROID, NULL, NULL, SW_SHOWNORMAL);
-#endif
-			}
 
 			if (fabs(buttY - downY) < (buttSize / 2.0))
 			{
@@ -641,14 +629,14 @@ void mainScreen_render()
 		alpha = 1.0;
 
 	// render support buttons
-	texture_apply(texSupp1);
+/*	texture_apply(texSupp1);
 	glPushMatrix();
 	glColor4f(1, 1, 1, alpha);
 	glTranslatef(left + buttSize / 2, bottom + buttSize / 4, 0);
 	glScalef(buttSize, buttSize / 2.0, 0);
 	render_quad();
 	glPopMatrix();
-
+*/
 	if (!browserAlpha.idle || showBrowser)
 		browserRender();
 }
@@ -748,6 +736,8 @@ void browserLoadLevel(int l)
 void browserRestart()
 {
 	browserLlevel = atoi(OS_getPref("last_level", "-1"));
+	if (browserLlevel > 98)
+		browserLlevel = 98;
 
 	//browserLlevel = nLevels - 2;
 	browserNPages = nLevels / 20;

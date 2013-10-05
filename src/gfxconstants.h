@@ -36,10 +36,8 @@
 #define GFX_BUTT_SIZE					1.5
 
 
-#define COPYRIGHT						"Copyright (C) Remigiusz Dybka 2012"
+#define COPYRIGHT						"Copyright (C) Remigiusz Dybka 2013"
 #define SEL_LEV_TXT						"Select level"
-#define LINUX_BROWSER_ANDROID			"xdg-open http://market.android.com/details?id=com.phuzzboxmedia.phlipple.android"
-#define WIN32_BROWSER_ANDROID			"http://market.android.com/details?id=com.phuzzboxmedia.phlipple.android"
 
 
 //#define SHOW_SPLASH

@@ -39,8 +39,6 @@ GLuint texButtonLeftRight;
 GLuint texTut1;
 GLuint texTut2;
 GLuint texTut3;
-GLuint texSupp1;
-GLuint texSupp2;
 
 TextRenderer *txtRend;
 GradientRenderer *grdRendMain;
@@ -104,8 +102,6 @@ void phlipple_root_initialize()
 	texTut1 = texture_load("tut1.png");
 	texTut2 = texture_load("tut2.png");
 	texTut3 = texture_load("tut3.png");
-	texSupp1 = texture_load("support_android.png");
-	texSupp2 = texture_load("support_apple.png");
 
 	txtRend = text_renderer_create("ubuntu_0.png", "ubuntu.fnt");
 	grdRendMain = gradient_renderer_create(mainGradCol0, mainGradCol1);
@@ -131,8 +127,6 @@ void phlipple_root_free()
 	texture_destroy(texTut1);
 	texture_destroy(texTut2);
 	texture_destroy(texTut3);
-	texture_destroy(texSupp1);
-	texture_destroy(texSupp2);
 
 	text_renderer_destroy(txtRend);
 	gradient_renderer_destroy(grdRendMain);

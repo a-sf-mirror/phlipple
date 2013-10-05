@@ -49,8 +49,6 @@ extern GLuint texButtonLeftRight;
 extern GLuint texTut1;
 extern GLuint texTut2;
 extern GLuint texTut3;
-extern GLuint texSupp1;
-extern GLuint texSupp2;
 
 extern TextRenderer *txtRend;
 extern GradientRenderer *grdRendMain;
